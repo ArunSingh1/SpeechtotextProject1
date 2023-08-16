@@ -4,7 +4,7 @@ from google.cloud import speech
 
 def call_gcp_speechtotextapi():
 
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'speechtotext.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'speechtotextkey.json'
     speech_client = speech.SpeechClient()
 
     # audio_file = 'OSR_us_000_0010_8k.wav'
