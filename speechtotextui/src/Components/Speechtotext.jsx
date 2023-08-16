@@ -1,10 +1,7 @@
 import React, { useState , useEffect}  from 'react'
 import { Box, Button, Typography } from "@mui/material";
 
-import VoiceActivityDetection from './VoiceDectection';
-// import Test from './Test';
-import NewVad from './NewVad';
-
+import VadModel from './VadModel';
 
 function Speechtotext() {
     
@@ -70,11 +67,11 @@ function Speechtotext() {
            
         }
 
-        {/* {buttonclickstate === true ? <VoiceActivityDetection startFlag = {buttonclickstate}></VoiceActivityDetection>: null}
-        {console.log(buttonclickstate)} */}
- 
-        {buttonclickstate === true ? <NewVad startFlag = {buttonclickstate}></NewVad>: null}
-        {console.log(buttonclickstate)}
+
+        {buttonclickstate && <VadModel startFlag={buttonclickstate} />}
+
+
+        {/* {console.log(buttonclickstate)} */}
 
         {/* {buttonclickstate === true ? <Test></Test>:null}  */}
 

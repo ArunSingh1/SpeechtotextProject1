@@ -2,6 +2,19 @@ import psycopg2
 import numpy as np
 
 
+# Queries to create table and insert query
+
+# CREATE TABLE maintableaudioandtext (
+# id SERIAL PRIMARY KEY,
+# audio_data BYTEA,
+# text_data TEXT
+# );
+
+# INSERT INTO public.maintableaudioandtext(
+# id, audio_data, text_data)
+# VALUES (?, ?, ?);
+
+
 def senddatato_db(audiodata, textdata ):
 
     # Connect to the PostgreSQL database
@@ -9,7 +22,7 @@ def senddatato_db(audiodata, textdata ):
         host="http://172.19.80.1:5432",
         database="postgres",
         user="postgres",
-        password="arun"
+        password="."
     )
 
     # Convert float32 data to bytes
